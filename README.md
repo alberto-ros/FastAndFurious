@@ -1,2 +1,6 @@
 # FastAndFurious
 Fast&amp;Furious tool to detect data races
+
+Existing multi-threaded applications perform synchronization either in an explicit way, e.g., making use of the functionality provided by synchronization libraries or in an implicit way, e.g., using shared variables. Unfortunately, the implicit synchronization constructs are prone to errors and difficult to detect. We developed a tool that is able to detect implicit synchronization in multi-threaded applications. The detection is performed by ensuring that during the execution of an application under a memory model that provides sequential consistency for data-race-free applications (SC for DRF), every read returns the same value as if running under sequential consistency. If the previous condition is not fulfilled by the execution, the application has data races, which may be intended to perform implicit synchronization.
+
+Cite this reference when referring to Fast&Furious: Alberto Ros, Stefanos Kaxiras, "Fast&Furious: A Tool for Detecting Covert Racing". 6th Workshop on Parallel Programming and Run-Time Management Techniques for Many-core Architectures (PARMA) and 4th Workshop on Design Tools and Architectures for Multicore Embedded Computing Platforms (DITAM), pages 1--6, January 2015.
